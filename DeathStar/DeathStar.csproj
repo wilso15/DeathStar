@@ -58,6 +58,7 @@
     <Compile Include="HydrogenGenerator.cs" />
     <Compile Include="HyperDrive.cs" />
     <Compile Include="HyperMatterReactor.cs" />
+    <Compile Include="IActivate.cs" />
     <Compile Include="IChangeTemperature.cs" />
     <Compile Include="IonDriveReactor.cs" />
     <Compile Include="MagneticShielding.cs" />

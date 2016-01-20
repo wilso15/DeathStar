@@ -35,7 +35,8 @@ namespace DeathStar
         }
         public void BuildDeathStar()
         {
-            superLaser.FireLaser();
+            superLaser.activate();
+            superLaser.refresh();
         }
     }
 }

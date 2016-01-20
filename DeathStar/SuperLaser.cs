@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
+using DeathStar;
 
 namespace TopSecretPlans
 {
-    public class SuperLaser
+    public class SuperLaser : IActivate
     {
         int laserPowerLevel;
         int laserDamage;
@@ -21,23 +23,27 @@ namespace TopSecretPlans
 
         }
 
-        public void FireLaser()
+        private void FireLaser()
       
         {
             laserPowerLevel -= 5;
             Console.WriteLine("Pew, pew, pew! The Super Laser loses 5 units of energy.");
-            
+
+            SoundPlayer pew = new SoundPlayer("peww1.wav");
+            pew.PlaySync();
+            //put into a while loop
+
             if (laserPowerLevel <= 0)
             {
                 Recharge();
             }
         }
-        public void Recharge()
+        private void Recharge()
         {
             laserPowerLevel = chargerPack;
-            Console.WriteLine("The Super Laser is recharging");
+            Console.WriteLine("The Super Laser is recharging... aaaaaaaaaand has recharged.");
         }
-        public void TripleShot()
+        private void TripleShot()
         {
             laserPowerLevel -= 15;
             Console.WriteLine("PEW PEW PEW... PEW PEW PEW... PEW PEW PEW!!!");
@@ -46,6 +52,16 @@ namespace TopSecretPlans
                 Recharge();
             }
 
+        }
+
+        public void activate()
+        {
+            FireLaser();
+        }
+
+        public void refresh()
+        {
+            Recharge();
         }
     }
 }
