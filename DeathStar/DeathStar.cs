@@ -12,8 +12,8 @@ namespace DeathStar
         Mainexhaustport mainExhaustPort;
         Thermalexhaustport ThermalExhaustPort;
         TractorBeam tractorBeam;
-        TractorBeamGenerator tractorBeamGenerator;
-        EmergencyRadiationDischarge emergencyRadiationDischarge;
+        //TractorBeamGenerator tractorBeamGenerator;
+        //EmergencyRadiationDischarge emergencyRadiationDischarge;
         MainPowerGenerator mainPowerGenerator;
         HyperMatterReactor hyperMatterReactor;
         IonDriveReactor ionDriveReactor;
@@ -28,6 +28,14 @@ namespace DeathStar
         Refinery refinery;
         FuelCollector fuelCollector;
         ExteriorQuadaniumsteelouterhull exteriorQuadaniumSteelOuterHull;
-        
+
+        public DeathStar()
+        {
+            superLaser = new SuperLaser(100,5,100);
+        }
+        public void BuildDeathStar()
+        {
+            superLaser.FireLaser();
+        }
     }
 }

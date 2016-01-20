@@ -46,6 +46,7 @@
     <Compile Include="Armory.cs" />
     <Compile Include="CentralComputerCore.cs" />
     <Compile Include="CoolingSystem.cs" />
+    <Compile Include="DeathStar.cs" />
     <Compile Include="Destination.cs" />
     <Compile Include="Exhaust.cs" />
     <Compile Include="ExteriorQuadaniumsteelouterhull.cs" />

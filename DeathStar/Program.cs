@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TopSecretPlans;
 
 
 namespace DeathStar
@@ -11,6 +12,10 @@ namespace DeathStar
     {
         static void Main(string[] args)
         {
+            DeathStar deathstar = new DeathStar();
+            deathstar.BuildDeathStar();
+            Console.Read();
+            
         }
     }
 }

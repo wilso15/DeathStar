@@ -11,7 +11,8 @@ namespace TopSecretPlans
         int laserPowerLevel;
         int laserDamage;
         int chargerPack;
-        
+
+
         public SuperLaser(int laserPowerLevel, int laserDamage, int chargerPack)
         {
             this.laserPowerLevel = laserPowerLevel;
@@ -24,7 +25,7 @@ namespace TopSecretPlans
       
         {
             laserPowerLevel -= 5;
-            Console.WriteLine("Pew, pew, pew!");
+            Console.WriteLine("Pew, pew, pew! The Super Laser loses 5 units of energy.");
             
             if (laserPowerLevel <= 0)
             {
